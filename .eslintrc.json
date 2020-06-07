@@ -3,6 +3,11 @@
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
       "tsconfigRootDir": ".",
+      "ecmaVersion": 2020, // Allows for the parsing of modern ECMAScript features
+    "sourceType": "module", // Allows for the use of imports
+    "ecmaFeatures": {
+      "jsx": true // Allows for the parsing of JSX
+    },
       "project": ["./tsconfig.json"]
     },
     "plugins": ["@typescript-eslint"],
@@ -13,12 +18,13 @@
       "plugin:@typescript-eslint/recommended-requiring-type-checking",
       "prettier/@typescript-eslint", // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
       "plugin:prettier/recommended",
-      "plugin:@typescript-eslint/recommended-requiring-type-checking",
+      "plugin:react/recommended",
       "plugin:import/errors",
       "plugin:import/warnings",
       "plugin:import/typescript"
     ],
     "rules": {
-      "prefer-const": "warn"
+      "prefer-const": "warn",
+      "react/react-in-jsx-scope":"off"
     }
   }
