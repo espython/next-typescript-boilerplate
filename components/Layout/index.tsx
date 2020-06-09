@@ -1,9 +1,10 @@
 import React from "react";
+import Navbar from "./Navbar";
 
 function Layout({ children }): JSX.Element {
   return (
-    <div>
-      <h2>hello from layout</h2>
+    <div className="container">
+      <Navbar />
       {children}
     </div>
   );

@@ -1,6 +1,7 @@
 import App from "next/app";
 import React from "react";
 import Layout from "../components/Layout";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class MainApp extends App {
   render(): JSX.Element {
